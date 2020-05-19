@@ -8,14 +8,26 @@ export default {
         const text = this.preview.string.replace(/(<([^>]+)>)/ig,"");
         this.set("value", text);
       },
+      undo() {
+        // const $textarea = $(this.element.querySelector("textarea.d-editor-input"));
+        $textarea.execCommand('undo', true, null);
+      },
       init() {
         this._super();
         this.toolbar.addButton({
-          id: "list1",
+          id: "clear-format",
           group: "extras",
           icon: "paint-brush",
           shortcut: "Shift+0",
-          title: "composer.olist_title",
+          title: "bvb-extend.editor.clear-format",
+          perform: e => this.resetTextFormat()
+        });
+        this.toolbar.addButton({
+          id: "undo",
+          group: "extras",
+          icon: "undo",
+          shortcut: "Ctrl(Command)+Z",
+          title: "bvb-extend.editor.undo",
           perform: e => this.resetTextFormat()
         });
       }

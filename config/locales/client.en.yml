@@ -4,3 +4,6 @@ en:
       password_confirm:
         title: "Password again"
         error: "Passwords do not match"
+      editor:
+        clear_format: "Clear format"
+        undo: "Undo"
