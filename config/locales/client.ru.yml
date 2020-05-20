@@ -1,0 +1,9 @@
+en:
+  js:
+    bvb-extends:
+      password_confirm:
+        title: "Пароль еще раз"
+        error: "Пароли не совпадают"
+      editor:
+        clear_format: "Очистить форматирование"
+        undo: "Отмена"
