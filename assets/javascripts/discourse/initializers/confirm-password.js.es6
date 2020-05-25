@@ -20,19 +20,11 @@ export default {
         });
       },
       @discourseComputed(
-        "passwordConfirmationValidation.failed",
-        "passwordRequired",
-        "nameValidation.failed",
-        "emailValidation.failed",
-        "usernameValidation.failed",
-        "passwordValidation.failed",
-        "userFieldsValidation.failed",
-        "formSubmitted",
-        "inviteCode"
+        "passwordConfirmationValidation.failed"
       )
-      submitDisabled: function () {
+      submitDisabledWithConfirmation: function () {
         if (this.get("passwordConfirmationValidation.failed")) return true;
-        return this._super();
+        return this.submitDisabled;
       }
     })
   }
