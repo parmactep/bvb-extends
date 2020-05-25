@@ -23,7 +23,6 @@ export default {
         "passwordConfirmationValidation.failed"
       )
       submitDisabledWithConfirmation: function () {
-        console.log('Disabled', this.get("passwordConfirmationValidation.failed"), this.submitDisabled);
         if (this.get("passwordConfirmationValidation.failed")) return true;
         return this.submitDisabled;
       }
