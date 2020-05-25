@@ -9,8 +9,7 @@ export default {
         this.set("value", text);
       },
       undo() {
-        // const $textarea = $(this.element.querySelector("textarea.d-editor-input"));
-        $textarea.execCommand('undo', true, null);
+        document.execCommand('undo', true, null);
       },
       init() {
         this._super();
@@ -28,7 +27,7 @@ export default {
           icon: "undo",
           shortcut: "Ctrl(Command)+Z",
           title: "bvb-extend.editor.undo",
-          perform: e => this.resetTextFormat()
+          perform: e => this.undo()
         });
       }
     })
