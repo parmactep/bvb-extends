@@ -30,7 +30,7 @@ export default {
         "formSubmitted",
         "inviteCode"
       )
-      submitDisabled: function () { console.log('SUBM BUTTON', this.get("passwordConfirmationValidation.failed"));
+      submitDisabled: function () {
         if (this.get("passwordConfirmationValidation.failed")) return true;
         return this._super();
       }
