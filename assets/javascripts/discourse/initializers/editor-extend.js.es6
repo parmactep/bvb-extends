@@ -18,7 +18,7 @@ export default {
           group: "extras",
           icon: "paint-brush",
           shortcut: "Shift+0",
-          title: "bvb-extend.editor.clear-format",
+          title: "bvb-extends.editor.clear_format",
           perform: e => this.resetTextFormat()
         });
         this.toolbar.addButton({
@@ -26,7 +26,7 @@ export default {
           group: "extras",
           icon: "undo",
           shortcut: "Ctrl(Command)+Z",
-          title: "bvb-extend.editor.undo",
+          title: "bvb-extends.editor.undo",
           perform: e => this.undo()
         });
       }
